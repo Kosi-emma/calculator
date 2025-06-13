@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>CALCULATOR</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Screen display Area -->
+      <input type="text" id="display-screen" disabled />
+
+      <!-- Button container -->
+      <div class="btn-area">
+        <!-- Number section of the button -->
+        <section class="numbers-btn">
+          <button onclick="attachValue('1')">1</button>
+          <button onclick="attachValue('2')">2</button>
+          <button onclick="attachValue('3')">3</button>
+          <button onclick="attachValue('4')">4</button>
+          <button onclick="attachValue('5')">5</button>
+          <button onclick="attachValue('6')">6</button>
+          <button onclick="attachValue('7')">7</button>
+          <button onclick="attachValue('8')">8</button>
+          <button onclick="attachValue('9')">9</button>
+          <button onclick="attachValue('.')">.</button>
+          <button onclick="attachValue('0')">0</button>
+          <button onclick="backSpace()">
+            <img src="./assets/image 1.png" alt="backspace" />
+          </button>
+        </section>
+        <!-- Operators section of the button -->
+        <section class="operators-btn-container">
+          <div class="operators-btn">
+            <button onclick="attachValue('*')">x</button>
+            <button onclick="attachValue('/')">÷</button>
+            <button onclick="attachValue('+')">+</button>
+            <button onclick="attachValue('-')">-</button>
+            <button onclick="clearDisplay()">c</button>
+            <button onclick="attachValue('%')">%</button>
+          </div>
+          <button class="equality-btn" onclick="evalExpression()">=</button>
+        </section>
+      </div>
+    </main>
+    <script src="index.js" defer></script>
+  </body>
+</html>

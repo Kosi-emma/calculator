@@ -1,0 +1,167 @@
+:root {
+  --primary-BG-color-1: rgba(36, 37, 48, 1);
+  --primary-BG-color-2: rgba(58, 63, 119, 1);
+  --primary-BS-color: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  --primary-BG-color-3: rgba(64, 66, 88, 1);
+  --primary-BG-color-4: rgba(244, 157, 26, 1);
+  --primary-BG-color-5: rgba(178, 178, 178, 1);
+  --primary-color-1: rgba(0, 0, 0, 1);
+  --primary-color-2: rgba(255, 255, 255, 1);
+}
+*,
+::after,
+::before {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.container {
+  width: 700px;
+  height: 637px;
+  margin: 100px auto;
+  padding: 70px;
+
+  background-color: var(--primary-BG-color-1);
+}
+#display-screen {
+  width: 550px;
+  height: 140px;
+  padding: 2rem;
+  border-radius: 20px;
+  letter-spacing: 0.2rem;
+  font-family: "Inter";
+  color: var(--primary-color-2);
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 100%;
+  border: none;
+  background-color: var(--primary-BG-color-2);
+  box-shadow: var(--primary-BS-color);
+}
+.btn-area {
+  display: flex;
+  gap: 70px;
+  margin: 25px 0;
+}
+.numbers-btn {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+.numbers-btn button {
+  width: 100px;
+  height: 60px;
+  border-radius: 35px;
+  border: none;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--primary-color-2);
+  background-color: var(--primary-BG-color-3);
+  box-shadow: var(--primary-BS-color);
+}
+.numbers-btn button:hover {
+  background-color: var(--primary-BG-color-5);
+}
+
+.operators-btn-container {
+  width: 40%;
+}
+.operators-btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 35px;
+}
+.operators-btn button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--primary-color-2);
+  background-color: var(--primary-BG-color-4);
+  box-shadow: var(--primary-BS-color);
+}
+.operators-btn button:hover {
+  background-color: var(--primary-BG-color-5);
+}
+.equality-btn {
+  width: 150px;
+  height: 60px;
+  margin-top: 35px;
+  border-radius: 100px;
+  border: none;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: var(--primary-color-1);
+  background-color: var(--primary-BG-color-5);
+  box-shadow: var(--primary-BS-color);
+}
+.equality-btn:hover {
+  background-color: var(--primary-BG-color-3);
+}
+/* Enlarge size for big screen sizes */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 400px;
+    height: 367px;
+    margin: 250px auto;
+    padding: 25px;
+
+    background-color: var(--primary-BG-color-1);
+  }
+  #display-screen {
+    width: 350px;
+    height: 70px;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 24px;
+  }
+  .btn-area {
+    gap: 25px;
+  }
+  .numbers-btn {
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+  .numbers-btn button {
+    width: 65px;
+    height: 45px;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .operators-btn {
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+  .operators-btn button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 32px;
+  }
+
+  .equality-btn {
+    width: 110px;
+    height: 45px;
+    margin-top: 15px;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 28px;
+  }
+}
